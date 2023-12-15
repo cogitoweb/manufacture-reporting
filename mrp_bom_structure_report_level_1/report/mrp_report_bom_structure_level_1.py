@@ -17,7 +17,7 @@ class MRPBomStructureReportLevel1(models.AbstractModel):
             child_bom_ids = []
 
         data = self._get_bom(
-            bom_id=bom_id, product_id=product_id.id, line_qty=qty)
+            bom_id=bom_id, product_id=product_id, line_qty=qty)
 
         def get_sub_lines(bom, product_id, line_qty, line_id, level):
             data = self._get_bom(bom_id=bom.id, product_id=product_id.id,
